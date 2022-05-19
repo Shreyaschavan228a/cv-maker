@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Lobster;
+    src: url(../assets/Lobster-Regular.ttf);
+}
+
+
+* {
+    scrollbar-color: #707070 #1f1f1f;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background-color: #2b2a33;
+    --primary-color: #2d2c33;
+    --border: #ffffff;
+    --accent-color: #208bee;
+    --font-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+
+.inputs {
+    border-right: 2px solid var(--border);
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.display {
+    flex-grow: 2;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.content-header {
+    width: 100vw;
+    height: 125px;
+    background-color: var(--accent-color);
+    font-family: 'Lobster';
+    font-size: 40px;
+    color: var(--font-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.content-header > h1 {
+    margin: auto 0 auto 0.5em;
+}
+.main-container {
+    width: 100vw;
+    height: calc(100vh - 125px);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.md-48 {
+    font-size: 48px;
+}
+
+.work-icon {
+    margin-left: 0.5em;
+}
