@@ -118,3 +118,73 @@ input:focus {
     border: 1px solid red;
 }
 
+
+.display-main-container {
+    width: 80%;
+    margin: 2em auto;
+    border: 1px solid black;
+    background-color: var(--input-container-bg);
+    height: fit-content;
+    padding: 1.5em;
+}
+
+.seperator {
+    background-color: #d1d1d1;
+    width: 100%;
+    display: block;
+}
+
+.thick {
+    height: 1em;
+}
+
+.thin {
+    height: 1px;
+    margin: 2em auto;
+}
+.placeholder-image {
+    width: 10em;
+    height: auto;
+    flex-basis: 5em;
+}
+
+.personal-info {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    column-gap: 1em;
+}
+
+.personal-info > div {
+    flex-grow: 2;
+}
+
+.name {
+    font-family: WorkSans-SemiBold;
+}
+
+.display-div-title {
+    font-family: WorkSans-SemiBold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    height: 3em;
+}
+
+.display-div {
+    margin: 0.75em;
+}
+
+.github-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#github-link {
+    text-decoration: none;
+}
