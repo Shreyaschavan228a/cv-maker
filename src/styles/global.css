@@ -3,6 +3,15 @@
     src: url(../assets/Lobster-Regular.ttf);
 }
 
+@font-face {
+    font-family: WorkSans-Light;
+    src: url(../assets/WorkSans-Light.ttf);
+}
+
+@font-face {
+    font-family: WorkSans-SemiBold;
+    src: url(../assets/WorkSans-SemiBold.ttf)
+}
 
 * {
     scrollbar-color: #707070 #1f1f1f;
@@ -12,28 +21,33 @@
 :root {
     --background-color: #2b2a33;
     --primary-color: #2d2c33;
+    --input-bg-color: #302f3a;
     --border: #ffffff;
     --accent-color: #208bee;
     --font-color: #ffffff;
+    --input-container-bg : #262529;
 }
+
 
 body {
     background-color: var(--background-color);
     margin: 0;
+    font-family: WorkSans-Light;
 }
-
 
 .inputs {
     border-right: 2px solid var(--border);
-    flex-grow: 1;
     height: 100%;
+    flex-grow: 1;
     overflow-y: scroll;
 }
 
 .display {
     flex-grow: 2;
+    flex-basis: 66.6%;
     height: 100%;
     overflow-y: scroll;
+    color: var(--font-color);
 }
 
 .content-header {
@@ -66,3 +80,41 @@ body {
 .work-icon {
     margin-left: 0.5em;
 }
+
+label {
+    color: var(--font-color);
+    margin-right: 0;
+    font-size: 1.25rem;
+}
+
+input {
+    height: 3em;
+    width: 20em;
+    background-color: var(--input-bg-color);
+    border-radius: 5px;
+    border: 1px solid black;
+    color: var(--font-color);
+    font-size: 1.25em;
+    padding-left: 0.5em;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5em 0.5em;
+    border: 1px solid #000;
+    padding: 0.75em 0.5em;
+    border-radius: 5px;
+    background-color: var(--input-container-bg);
+}
+
+.bad-input {
+    border: 1px solid red;
+}
+
