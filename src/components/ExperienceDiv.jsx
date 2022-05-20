@@ -1,6 +1,6 @@
 
 const ExperienceDiv = (props) => {
-    const {title, timeRange, description, accomplishments, elemId} = props;
+    const {title, timeRange, description, accomplishments} = props;
 
     return (
         <div className="display-div">

@@ -2,11 +2,11 @@ import { useRef } from "react";
 
 const Inputs = (props) => {
     const emailInput = useRef(null);
-    // the regex below doesnt make much sense to me but it works
-    // eslint-disable-next-line
-    const regex = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
     const checkEmail = () => {
         const email = emailInput.current.value;
+        // the regex below doesnt make much sense to me but it works
+        // eslint-disable-next-line
+        const regex = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";    
         if(!email.match(regex) && email !== ""){
             emailInput.current.classList.add("bad-input");
         }

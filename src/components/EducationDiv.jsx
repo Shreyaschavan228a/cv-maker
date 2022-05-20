@@ -1,5 +1,5 @@
 const EducationDiv = (props) => {
-    const {title, description, timeRange, elemId} = props;
+    const {title, description, timeRange} = props;
 
     return (
         <div className="display-div">

@@ -55,8 +55,8 @@ const Display = (props) => {
                 <Seperator />
                 <div className="github-container">
                     <h3>
-                        <img src={GitHubMark} alt="GitHub-Logo"/>
-                        Github: <a href={cvData.github} id="github-link">
+                        <img src={GitHubMark} alt="GitHub-Logo" id="github-mark"/>
+                        GitHub: <a href={cvData.github} id="github-link">
                             {getUsername(cvData.github)}
                         </a>
                     </h3>
