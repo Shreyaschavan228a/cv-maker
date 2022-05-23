@@ -20,10 +20,13 @@ const Display = (props) => {
                         <Seperator thick />
                         <h1 className="first-name name">{cvData.firstName}</h1>
                         <h1 className="last-name name">{cvData.lastName}</h1>
-                        <h3 className="email">{cvData.email}</h3>
+                        <div className="contact-details">
+                            <h3 className="email">{cvData.email}</h3>
+                            <h3 className="contact"><b>Phone:</b> {cvData.contact}</h3>
+                        </div>
                         <Seperator thick  />
                     </div>
-                    <img alt="placeholder-for-cv" src={image} className="placeholder-image" />
+                    <img alt="placeholder-for-cv" src={cvData.imgUrl !== "" ? cvData.imgUrl : image} className="placeholder-image" />
                 </div>
                 <Seperator />
                 <div className="edu-level-container">

@@ -144,9 +144,11 @@ input:focus {
 }
 .placeholder-image {
     width: 10em;
-    height: auto;
+    height: 14em;
     /* flex-basis: 5em; */
     float: right;
+    border-radius: 0.2em;
+    border: 1px solid black;
 }
 
 .personal-info {
@@ -158,6 +160,12 @@ input:focus {
 
 .personal-info > div {
     flex-grow: 2;
+}
+
+.contact-details {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .name {

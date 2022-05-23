@@ -1,7 +1,14 @@
 import { useRef } from "react";
 
 const Inputs = (props) => {
+    const {setCvData, cvData} = props;
+    
     const emailInput = useRef(null);
+    const firstName = useRef(null);
+    const lastName = useRef(null);
+    const contact = useRef(null);
+    const imgUrl = useRef(null);
+
     const checkEmail = () => {
         const email = emailInput.current.value;
         // the regex below doesnt make much sense to me but it works
@@ -15,27 +22,35 @@ const Inputs = (props) => {
         }
     }
 
+    const updateCvData = (fieldName, fieldRef) => {
+        //cant just do oldCvData = cvData because the second line then will directly modify the state
+        let oldCvData = structuredClone(cvData);
+        oldCvData[fieldName] = fieldRef.current.value;
+        console.log(oldCvData, cvData);
+        setCvData(oldCvData);
+    }
+
     return (
         <div className="inputs">
             <div className="input-container">
                 <label htmlFor="first-name">First-Name: </label>
-                <input type="text" id="first-name" />
+                <input type="text" id="first-name" ref={firstName} onBlur={()=>{updateCvData("firstName", firstName)}}/>
             </div>
             <div className="input-container">
                 <label htmlFor="last-name">Last-Name: </label>
-                <input type="text" id="last-name" />
+                <input type="text" id="last-name" ref={lastName} onBlur={()=>{updateCvData("lastName", lastName)}}/>
             </div>
             <div className="input-container">
                 <label htmlFor="email">Email: </label>
-                <input type="email" id="email" ref={emailInput} onBlur={()=>{checkEmail();}}/>
+                <input type="email" id="email" ref={emailInput} onBlur={()=>{checkEmail(); updateCvData("email", emailInput)}}/>
             </div>
             <div className="input-container">
                 <label htmlFor="contact">Contact: </label>
-                <input type="tel" id="contact" />
+                <input type="tel" id="contact" ref={contact} onBlur={()=>{updateCvData("contact", contact)}}/>
             </div>
             <div className="input-container">
                 <label htmlFor="display-image">Image URL: </label>
-                <input type="url" id="display-image" />
+                <input type="url" id="display-image" ref={imgUrl} onBlur={()=>{updateCvData("imgUrl", imgUrl)}}/>
             </div>
         </div>
     );

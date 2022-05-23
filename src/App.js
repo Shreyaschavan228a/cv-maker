@@ -11,7 +11,7 @@ function App() {
         <div className="app">
             <Header />
             <div className="main-container">
-                <Inputs setCvData={setCvData}/>
+                <Inputs setCvData={setCvData} cvData={cvData}/>
                 <Display cvData={cvData}/>
             </div>
         </div>
