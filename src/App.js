@@ -2,7 +2,6 @@ import "./styles/global.css";
 import Display from "./components/Display";
 import Inputs from "./components/Inputs";
 import Header from "./components/Header";
-
 import { useState } from "react";
 
 function App() {
@@ -24,8 +23,18 @@ const testData = {
     "education": [
         {
             "title": "consectetur adipiscing elit.",
-            "description": "Aliquam sagittis et orci sed congue. Suspendisse non urna vel felis luctus tristique ut sit amet elit. Proin sit amet enim id eros.",
+            "description": "Aliquam sagittis et orci sed congue. Suspendisse non urna vel felis luctus tristique ut sit amet elit.",
             "timeRange": "1996-2000"
+        },
+        {
+            "title": "Nunc efficitur mi eu.",
+            "description": "Mauris vitae hendrerit ligula. Donec molestie mauris at quam dignissim tincidunt. Pellentesque habitant.",
+            "timeRange": "1996-2010"
+        },
+        {
+            "title": "Etiam eu augue.",
+            "description": "Nulla sit amet dolor non est tempus tincidunt. Morbi diam tortor, dignissim sit.",
+            "timeRange": "1996-2020"
         }
     ],
     "imgUrl": "",

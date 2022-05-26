@@ -19,13 +19,16 @@
 }
 
 :root {
-    --background-color: #2b2a33;
+    --background-color: #24282a;
     --primary-color: #2d2c33;
-    --input-bg-color: #302f3a;
+    --input-bg-color: #292c2e;
     --border: #ffffff;
     --accent-color: #208bee;
     --font-color: #ffffff;
-    --input-container-bg : #262529;
+    --input-container-bg : #151718;
+    --btn-color: #2c2c2c;
+    --single-education-input-bg: #1a191b;
+    --box-shadow-color: #dfcece;
 }
 
 
@@ -77,6 +80,14 @@ body {
     font-size: 48px;
 }
 
+.md-36 {
+    font-size: 36px;
+}
+
+.md-24 {
+    font-size: 24px;
+}
+
 .work-icon {
     margin-left: 0.5em;
 }
@@ -109,10 +120,16 @@ input:focus {
     align-items: center;
     margin: 1.5em 0.5em;
     border: 1px solid #000;
-    padding: 0.75em 0.5em;
+    padding: 0.5em 0.5em;
     border-radius: 5px;
     background-color: var(--input-container-bg);
 }
+
+.input-container:hover {
+    box-shadow: rgba(255, 255, 255, 0.35) 0em 0.2em 0.6em; 
+}
+
+
 
 .bad-input {
     border: 1px solid red;
@@ -144,8 +161,8 @@ input:focus {
 }
 .placeholder-image {
     width: 10em;
-    height: 14em;
-    /* flex-basis: 5em; */
+    /* weird multiplication for correct aspect-ratio in default image */
+    height: calc(10em * 1.3628);
     float: right;
     border-radius: 0.2em;
     border: 1px solid black;
@@ -209,3 +226,131 @@ input:focus {
     top: 0.25em;
 }
 
+.single-education-input {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0.1em 0.1em;
+    gap: 0.1em;
+    background-color: var(--input-container-bg);
+}
+
+.single-education-input > .input-container {
+    margin: 0.1em 0;
+    padding: auto;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    box-shadow: none;
+}
+
+
+.single-education-input > .input-container > input {
+    width: 18em;
+}
+.multi-input-container {
+    margin: 1.5em 0.5em;
+    border: 1px solid #000;
+    padding: 0.5em 0.1em;
+    border-radius: 5px;
+    background-color: var(--input-container-bg);
+}
+
+button {
+    background: transparent;
+    color: var(--font-color);
+    padding: 0.25em;
+    width: 5em;
+    height: 2em;
+    border-radius: 0.1em;
+    margin: 0.25em;
+    border: none;
+}
+
+.add-btn {
+    width: fit-content
+}
+
+.remove-btn {
+    width: fit-content;
+}
+
+.remove-btn-container {
+    align-self: flex-end;
+}
+
+.multi-input-label {
+    display: inline-block;
+    width: calc(100% - 1em);
+    height: 2em;
+    padding: 0.5em;
+    line-height: 2em;
+}
+
+.single-qualifications-input {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0.5em auto;
+}
+.single-qualifications-input > label {
+    flex-basis: 1.2em;
+}
+
+.single-education-input > input {
+    flex-grow: 1;
+}
+
+.qualifications-input {
+    padding: 0.5em 0.1em;
+}
+
+.single-experience-input {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0.5em auto;
+}
+
+.single-experience-input > .input-container {
+    margin: 0.5em;
+    width: calc(100% - 2em);
+}
+
+.single-input-container > .input-container > input {
+    width: 18em;
+}
+
+.accomplishments-input {
+    display: flex;
+    flex-flow: column wrap;
+    width: calc(100% - 1em);
+    align-items: flex-start;
+    padding: 0.25em 0.1em;
+    margin: 0.5em auto;
+}
+
+.single-accomplishments-input {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0.5em auto;
+}
+
+.single-accomplishments-input > label {
+    flex-basis: 1.2em;
+    margin: 0.5em;
+}
+
+.single-accomplishments-input > input {
+    flex-grow: 1;
+}
+
+/* .single-accomlishments-input > input {
+    width: 16em;
+} */
