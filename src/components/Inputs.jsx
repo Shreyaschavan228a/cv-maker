@@ -56,8 +56,8 @@ const Inputs = (props) => {
                 <input type="url" id="display-image" ref={imgUrl} onBlur={()=>{updateCvData("imgUrl", imgUrl)}} defaultValue={cvData.imgUrl}/>
             </div>
             <EducationInput cvData={cvData} setCvData={setCvData}/>
-            <QualificationsInput cvData={cvData} setCvData={setCvData} />
             <ExperienceInput cvData={cvData} setCvData={setCvData} />
+            <QualificationsInput cvData={cvData} setCvData={setCvData} />
         </div>
     );
 };
