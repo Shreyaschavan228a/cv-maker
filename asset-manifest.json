@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/cv-maker/static/css/main.a29b704a.css",
-    "main.js": "/cv-maker/static/js/main.1e3acf52.js",
+    "main.js": "/cv-maker/static/js/main.2e2d7ffd.js",
     "static/media/Lobster-Regular.ttf": "/cv-maker/static/media/Lobster-Regular.03c38496322925fec242.ttf",
     "static/media/WorkSans-SemiBold.ttf": "/cv-maker/static/media/WorkSans-SemiBold.9e3cc5f18015e0a55995.ttf",
     "static/media/WorkSans-Light.ttf": "/cv-maker/static/media/WorkSans-Light.6c55d51020749e7f6bec.ttf",
     "static/media/placeholder_image.png": "/cv-maker/static/media/placeholder_image.cedf234c0ac4761153d5.png",
     "index.html": "/cv-maker/index.html",
     "main.a29b704a.css.map": "/cv-maker/static/css/main.a29b704a.css.map",
-    "main.1e3acf52.js.map": "/cv-maker/static/js/main.1e3acf52.js.map"
+    "main.2e2d7ffd.js.map": "/cv-maker/static/js/main.2e2d7ffd.js.map"
   },
   "entrypoints": [
     "static/css/main.a29b704a.css",
-    "static/js/main.1e3acf52.js"
+    "static/js/main.2e2d7ffd.js"
   ]
 }
