@@ -37,8 +37,7 @@ const AccomplishmentsInput = (props) => {
         )
     }
 
-    //https://boards.4chan.org/gif/thread/22743041
-    //kxobby
+    
     return (
         <div className="multi-input-container accomplishments-input">
             <label onClick={()=>setVisibleAccomplishments(!visibleAccomplishments)} className="multi-input-label">Accomplishments: </label>
